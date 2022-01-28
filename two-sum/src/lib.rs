@@ -1,3 +1,5 @@
+use ::std::collections::HashMap;
+
 #[cfg(test)]
 mod tests {
     use crate::two_sum;
@@ -14,11 +16,25 @@ mod tests {
 }
 
 pub fn two_sum(nums: &[i32], target: i32) -> Option<(usize, usize)> {
-    for i in 0..nums.len() {
-        for j in i..nums.len() {
-            if nums[i] + nums[j] == target {
-                return Some((i, j));
-            }
+    let map = {
+        let mut map = HashMap::new();
+
+        for (i, &val) in nums.iter().enumerate() {
+            map.insert(val, i);
+        }
+        map
+    };
+
+    for (val, i) in &map {
+        let elem = map.get(&(target - val));
+        if elem.is_some() {
+            return Some({
+                if *i > *elem.unwrap() {
+                    (*elem.unwrap(), *i)
+                } else {
+                    (*i, *elem.unwrap())
+                }
+            });
         }
     }
     None
