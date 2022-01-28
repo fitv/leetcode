@@ -18,7 +18,7 @@ mod tests {
 pub fn two_sum(nums: &[i32], target: i32) -> Option<(usize, usize)> {
     let mut map = HashMap::new();
 
-    for (i, _) in nums.iter().enumerate() {
+    for i in 0..nums.len() {
         let elem = map.get(&nums[i]);
 
         if elem.is_some() {
