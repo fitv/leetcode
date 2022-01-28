@@ -19,12 +19,12 @@ pub fn two_sum(nums: &[i32], target: i32) -> Option<(usize, usize)> {
     let mut map = HashMap::new();
 
     for i in 0..nums.len() {
-        let elem = map.get(&nums[i]);
+        let elem = map.get(&(target - nums[i]));
 
         if elem.is_some() {
             return Some((i, *elem.unwrap()));
         }
-        map.insert(target - nums[i], i);
+        map.insert(nums[i], i);
     }
     None
 }
