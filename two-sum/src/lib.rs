@@ -27,6 +27,7 @@ pub fn two_sum(nums: &[i32], target: i32) -> Option<(usize, usize)> {
 
     for (val, i) in &map {
         let elem = map.get(&(target - val));
+
         if elem.is_some() {
             return Some({
                 if *i > *elem.unwrap() {
