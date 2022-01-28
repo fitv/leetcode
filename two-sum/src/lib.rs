@@ -30,10 +30,12 @@ pub fn two_sum(nums: &[i32], target: i32) -> Option<(usize, usize)> {
 
         if elem.is_some() {
             return Some({
-                if *i > *elem.unwrap() {
-                    (*elem.unwrap(), *i)
+                let (x, y) = (*i, *elem.unwrap());
+
+                if x > y {
+                    (y, x)
                 } else {
-                    (*i, *elem.unwrap())
+                    (x, y)
                 }
             });
         }
