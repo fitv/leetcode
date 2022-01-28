@@ -1,13 +1,15 @@
 #[cfg(test)]
 mod tests {
+    use crate::two_sum;
+
     #[test]
     fn test_two_sum() {
         let nums = [2, 7, 11, 15];
 
-        assert_eq!(Some((0, 1)), super::two_sum(&nums, 9));
-        assert_eq!(Some((1, 2)), super::two_sum(&nums, 18));
-        assert_eq!(Some((2, 3)), super::two_sum(&nums, 26));
-        assert_eq!(None, super::two_sum(&nums, 100));
+        assert_eq!(Some((0, 1)), two_sum(&nums, 9));
+        assert_eq!(Some((1, 2)), two_sum(&nums, 18));
+        assert_eq!(Some((2, 3)), two_sum(&nums, 26));
+        assert_eq!(None, two_sum(&nums, 100));
     }
 }
 
