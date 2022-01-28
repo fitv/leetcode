@@ -1,3 +1,3 @@
 ## LeetCode
 
-- Two Sum
+- [1. Two Sum](./two-sum/src/lib.rs)
