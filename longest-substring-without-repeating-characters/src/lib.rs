@@ -22,7 +22,7 @@ pub struct Solution {}
 
 impl Solution {
     pub fn length_of_longest_substring(s: String) -> i32 {
-        let mut max_len = 0;
+        let mut len = 0;
         let mut cursor = 0;
         let mut map = HashMap::new();
         let chars: Vec<_> = s.chars().collect();
@@ -33,10 +33,10 @@ impl Solution {
             if idx.is_some() {
                 cursor = cmp::max(cursor, *idx.unwrap() + 1);
             }
-            max_len = cmp::max(max_len, i - cursor + 1);
+            len = cmp::max(len, i - cursor + 1);
 
             map.insert(chars[i], i);
         }
-        return max_len as i32;
+        return len as i32;
     }
 }
