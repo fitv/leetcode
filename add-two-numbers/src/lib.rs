@@ -4,20 +4,20 @@ mod tests {
 
     #[test]
     fn test_add_two_numbers() {
-        let mut n1 = ListNode::new(9);
-        n1.append(9);
-        n1.append(9);
-        n1.append(9);
-        n1.append(9);
-        n1.append(9);
-        n1.append(9);
-        let l1 = Some(Box::new(n1));
+        let mut node = ListNode::new(9);
+        node.append(9);
+        node.append(9);
+        node.append(9);
+        node.append(9);
+        node.append(9);
+        node.append(9);
+        let l1 = Some(Box::new(node));
 
-        let mut n2 = ListNode::new(9);
-        n2.append(9);
-        n2.append(9);
-        n2.append(9);
-        let l2 = Some(Box::new(n2));
+        let mut node = ListNode::new(9);
+        node.append(9);
+        node.append(9);
+        node.append(9);
+        let l2 = Some(Box::new(node));
 
         let result = Solution::add_two_numbers(l1, l2);
         let mut nums = vec![];
