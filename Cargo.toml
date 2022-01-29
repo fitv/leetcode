@@ -3,4 +3,5 @@
 members = [
     "utils",
     "two-sum",
+    "add-two-numbers",
 ]
