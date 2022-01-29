@@ -2,29 +2,38 @@ use std::collections::HashMap;
 
 #[cfg(test)]
 mod tests {
-    use crate::two_sum;
+    use crate::Solution;
 
     #[test]
     fn test_two_sum() {
-        let nums = [2, 7, 11, 15];
+        let nums = vec![2, 7, 11, 15];
+        let result = Solution::two_sum(nums, 18);
+        assert!(result == vec![1, 2] || result == vec![2, 1]);
 
-        assert!(Some((0, 1)) == two_sum(&nums, 9) || Some((1, 0)) == two_sum(&nums, 9));
-        assert!(Some((1, 2)) == two_sum(&nums, 18) || Some((2, 1)) == two_sum(&nums, 18));
-        assert!(Some((2, 3)) == two_sum(&nums, 26) || Some((3, 2)) == two_sum(&nums, 26));
-        assert_eq!(None, two_sum(&nums, 100));
+        let nums = vec![3, 3];
+        let result = Solution::two_sum(nums, 6);
+        assert!(result == vec![0, 1] || result == vec![1, 0]);
+
+        let nums = vec![1, 3, 5];
+        let result = Solution::two_sum(nums, 10);
+        assert_eq!(result, vec![]);
     }
 }
 
-pub fn two_sum(nums: &[i32], target: i32) -> Option<(usize, usize)> {
-    let mut map = HashMap::new();
+pub struct Solution {}
 
-    for i in 0..nums.len() {
-        let elem = map.get(&(target - nums[i]));
+impl Solution {
+    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
+        let mut map = HashMap::new();
 
-        if elem.is_some() {
-            return Some((i, *elem.unwrap()));
+        for (i, &num) in nums.iter().enumerate() {
+            let elem = map.get(&(target - num));
+
+            if elem.is_some() {
+                return vec![i as i32, *elem.unwrap() as i32];
+            }
+            map.insert(num, i);
         }
-        map.insert(nums[i], i);
+        vec![]
     }
-    None
 }
