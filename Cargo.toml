@@ -6,4 +6,5 @@ members = [
     "add-two-numbers",
     "longest-substring-without-repeating-characters",
     "uncommon-words-from-two-sentences",
+    "palindrome-number",
 ]
