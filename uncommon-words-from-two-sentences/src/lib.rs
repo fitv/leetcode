@@ -26,8 +26,8 @@ impl Solution {
         let mut map = HashMap::new();
 
         for word in s.split_whitespace() {
-            let counter = map.entry(word).or_insert(0);
-            *counter += 1;
+            let count = map.entry(word).or_insert(0);
+            *count += 1;
         }
         for (word, count) in &map {
             if *count == 1 {

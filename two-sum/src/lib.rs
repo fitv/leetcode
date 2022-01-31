@@ -27,10 +27,10 @@ impl Solution {
         let mut map = HashMap::new();
 
         for (i, &num) in nums.iter().enumerate() {
-            let elem = map.get(&(target - num));
+            let val = map.get(&(target - num));
 
-            if elem.is_some() {
-                return vec![i as i32, *elem.unwrap() as i32];
+            if val.is_some() {
+                return vec![i as i32, *val.unwrap() as i32];
             }
             map.insert(num, i);
         }
