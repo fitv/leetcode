@@ -14,8 +14,8 @@ pub struct Solution {}
 
 impl Solution {
     pub fn number_of_steps(num: i32) -> i32 {
-        let mut times = 0;
         let mut num = num;
+        let mut times = 0;
 
         while num != 0 {
             if num % 2 == 0 {
