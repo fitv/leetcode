@@ -7,4 +7,5 @@ members = [
     "longest-substring-without-repeating-characters",
     "uncommon-words-from-two-sentences",
     "palindrome-number",
+    "longest-palindromic-substring",
 ]

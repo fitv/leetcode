@@ -29,7 +29,6 @@ impl Solution {
             let counter = map.entry(word).or_insert(0);
             *counter += 1;
         }
-
         for (word, count) in &map {
             if *count == 1 {
                 words.push((*word).to_string());
