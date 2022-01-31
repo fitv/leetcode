@@ -8,4 +8,5 @@ members = [
     "uncommon-words-from-two-sentences",
     "palindrome-number",
     "longest-palindromic-substring",
+    "median-of-two-sorted-arrays",
 ]

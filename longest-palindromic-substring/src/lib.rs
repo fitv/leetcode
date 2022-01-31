@@ -34,7 +34,7 @@ impl Solution {
         let chars: Vec<_> = s.chars().collect();
 
         let mut find_longest = |mut low: usize, mut high: usize| {
-            while low >= 0 && high < s.len() && chars[low] == chars[high] {
+            while low >= 0 && high < chars.len() && chars[low] == chars[high] {
                 if high - low + 1 > max {
                     max = high - low + 1;
                     range = (low, high);
