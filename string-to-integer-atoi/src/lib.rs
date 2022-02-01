@@ -30,8 +30,6 @@ impl Solution {
     pub fn my_atoi(s: String) -> i32 {
         let mut sum: i32 = 0;
         let mut negative = false;
-        let max = i32::MAX;
-        let min = i32::MIN;
         let chars: Vec<_> = s.trim().chars().collect();
 
         match chars.first() {
@@ -54,12 +52,12 @@ impl Solution {
                     let x = Self::char_to_digit(x);
 
                     if sum.checked_mul(10).is_none() {
-                        return if negative { min } else { max };
+                        return if negative { i32::MIN } else { i32::MAX };
                     }
                     sum *= 10;
 
                     if sum.checked_add(x).is_none() {
-                        return if negative { min } else { max };
+                        return if negative { i32::MIN } else { i32::MAX };
                     }
                     sum += x;
                 }
