@@ -31,7 +31,7 @@ impl Solution {
         let mut sum: i32 = 0;
         let mut negative = false;
         let max = i32::MAX;
-        let max_negative = i32::MIN;
+        let min = i32::MIN;
         let chars: Vec<_> = s.trim().chars().collect();
 
         match chars.first() {
@@ -54,12 +54,12 @@ impl Solution {
                     let x = x.to_digit(10).unwrap() as i32;
 
                     if sum.checked_mul(10).is_none() {
-                        return if negative { max_negative } else { max };
+                        return if negative { min } else { max };
                     }
                     sum *= 10;
 
                     if sum.checked_add(x).is_none() {
-                        return if negative { max_negative } else { max };
+                        return if negative { min } else { max };
                     }
                     sum += x;
                 }
