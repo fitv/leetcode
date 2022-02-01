@@ -8,3 +8,4 @@
 - [9. Palindrome Number](./palindrome-number/src/lib.rs)
 - [884. Uncommon Words from Two Sentences](./uncommon-words-from-two-sentences/src/lib.rs)
 - [1342. Number of Steps to Reduce a Number to Zero](./number-of-steps-to-reduce-a-number-to-zero/src/lib.rs)
+- [1763. Longest Nice Substring](./longest-nice-substring/src/lib.rs)
