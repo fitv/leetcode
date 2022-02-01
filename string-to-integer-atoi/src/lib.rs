@@ -39,7 +39,7 @@ impl Solution {
                 }
                 '+' => {}
                 x @ '0'..='9' => {
-                    sum = Self::char_to_digit(x);
+                    sum = Self::char_to_digit(x) as i32;
                 }
                 _ => return 0,
             },
@@ -49,7 +49,7 @@ impl Solution {
         for i in 1..chars.len() {
             match chars.get(i).unwrap() {
                 x @ '0'..='9' => {
-                    let x = Self::char_to_digit(x);
+                    let x = Self::char_to_digit(x) as i32;
 
                     if sum.checked_mul(10).is_none() {
                         return if negative { i32::MIN } else { i32::MAX };
@@ -68,7 +68,7 @@ impl Solution {
         return if negative { -sum } else { sum };
     }
 
-    fn char_to_digit(c: &char) -> i32 {
+    fn char_to_digit(c: &char) -> u8 {
         return match c {
             '0' => 0,
             '1' => 1,
