@@ -28,9 +28,11 @@ pub struct Solution {}
 
 impl Solution {
     pub fn my_atoi(s: String) -> i32 {
-        let chars: Vec<_> = s.trim().chars().collect();
         let mut sum: i32 = 0;
         let mut negative = false;
+        let max = 2147483647;
+        let max_negative = -2147483648;
+        let chars: Vec<_> = s.trim().chars().collect();
 
         match chars.first() {
             Some(v) => match v {
@@ -52,12 +54,12 @@ impl Solution {
                     let x = x.to_digit(10).unwrap() as i32;
 
                     if sum.checked_mul(10).is_none() {
-                        return if negative { -2147483648 } else { 2147483647 };
+                        return if negative { max_negative } else { max };
                     }
                     sum *= 10;
 
                     if sum.checked_add(x).is_none() {
-                        return if negative { -2147483648 } else { 2147483647 };
+                        return if negative { max_negative } else { max };
                     }
                     sum += x;
                 }
