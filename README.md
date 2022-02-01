@@ -5,6 +5,7 @@
 - [3. Longest Substring Without Repeating Characters](./longest-substring-without-repeating-characters/src/lib.rs)
 - [4. Median of Two Sorted Arrays](./median-of-two-sorted-arrays/src/lib.rs)
 - [5. Longest Palindromic Substring](./longest-palindromic-substring/src/lib.rs)
+- [7. Reverse Integer](./reverse-integer/src/lib.rs)
 - [9. Palindrome Number](./palindrome-number/src/lib.rs)
 - [884. Uncommon Words from Two Sentences](./uncommon-words-from-two-sentences/src/lib.rs)
 - [1342. Number of Steps to Reduce a Number to Zero](./number-of-steps-to-reduce-a-number-to-zero/src/lib.rs)

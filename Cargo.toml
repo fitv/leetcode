@@ -11,4 +11,5 @@ members = [
     "median-of-two-sorted-arrays",
     "number-of-steps-to-reduce-a-number-to-zero",
     "longest-nice-substring",
+    "reverse-integer",
 ]
