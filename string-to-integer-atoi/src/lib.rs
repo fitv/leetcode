@@ -20,7 +20,7 @@ mod tests {
         assert_eq!(Solution::my_atoi(s), 0);
 
         let s = String::from("-91283472332");
-        assert_eq!(Solution::my_atoi(s), -2147483648);
+        assert_eq!(Solution::my_atoi(s), i32::MIN);
     }
 }
 
