@@ -12,4 +12,5 @@ members = [
     "number-of-steps-to-reduce-a-number-to-zero",
     "longest-nice-substring",
     "reverse-integer",
+    "string-to-integer-atoi",
 ]
