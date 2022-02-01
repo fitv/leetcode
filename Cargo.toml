@@ -13,4 +13,5 @@ members = [
     "longest-nice-substring",
     "reverse-integer",
     "string-to-integer-atoi",
+    "integer-to-roman",
 ]
