@@ -1,7 +1,6 @@
 [workspace]
 
 members = [
-    "utils",
     "two-sum",
     "add-two-numbers",
     "longest-substring-without-repeating-characters",
@@ -14,4 +13,5 @@ members = [
     "reverse-integer",
     "string-to-integer-atoi",
     "integer-to-roman",
+    "roman-to-integer",
 ]
