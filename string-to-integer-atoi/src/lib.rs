@@ -47,7 +47,7 @@ impl Solution {
         }
 
         for i in 1..chars.len() {
-            match chars[i] {
+            match &chars[i] {
                 x @ '0'..='9' => {
                     let x = Self::char_to_digit(x) as i32;
 
