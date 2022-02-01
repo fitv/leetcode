@@ -30,8 +30,8 @@ impl Solution {
     pub fn my_atoi(s: String) -> i32 {
         let mut sum: i32 = 0;
         let mut negative = false;
-        let max = 2147483647;
-        let max_negative = -2147483648;
+        let max = i32::MAX;
+        let max_negative = i32::MIN;
         let chars: Vec<_> = s.trim().chars().collect();
 
         match chars.first() {
