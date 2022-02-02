@@ -15,4 +15,5 @@ members = [
     "integer-to-roman",
     "roman-to-integer",
     "reverse-prefix-of-word",
+    "longest-common-prefix",
 ]
