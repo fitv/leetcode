@@ -31,7 +31,6 @@ impl Solution {
                         .unwrap()
                         .iter()
                         .collect::<String>()
-                        .as_str()
                 );
             }
         }
