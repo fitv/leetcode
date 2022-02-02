@@ -17,4 +17,5 @@ members = [
     "reverse-prefix-of-word",
     "longest-common-prefix",
     "valid-parentheses",
+    "merge-two-sorted-lists",
 ]

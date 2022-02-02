@@ -12,6 +12,7 @@
 - [13. Roman to Integer](./roman-to-integer/src/lib.rs)
 - [14. Longest Common Prefix](./longest-common-prefix/src/lib.rs)
 - [20. Valid Parentheses](./valid-parentheses/src/lib.rs)
+- [21. Merge Two Sorted Lists](./merge-two-sorted-lists/src/lib.rs)
 - [884. Uncommon Words from Two Sentences](./uncommon-words-from-two-sentences/src/lib.rs)
 - [1342. Number of Steps to Reduce a Number to Zero](./number-of-steps-to-reduce-a-number-to-zero/src/lib.rs)
 - [1763. Longest Nice Substring](./longest-nice-substring/src/lib.rs)
