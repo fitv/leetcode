@@ -14,4 +14,5 @@ members = [
     "string-to-integer-atoi",
     "integer-to-roman",
     "roman-to-integer",
+    "reverse-prefix-of-word",
 ]
