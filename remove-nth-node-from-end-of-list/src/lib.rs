@@ -59,8 +59,8 @@ pub struct Solution {}
 impl Solution {
     pub fn remove_nth_from_end(head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {
         let mut head = head;
-        let mut slow = &mut head;
-        let mut fast = &slow.clone();
+        let mut fast = &head;
+        let mut x = 0;
 
         for _ in 0..n {
             fast = &fast.as_ref().unwrap().next;
@@ -69,10 +69,16 @@ impl Solution {
         if fast.as_ref().is_none() {
             return head.unwrap().next;
         }
-
         while fast.as_ref().unwrap().next.is_some() {
             fast = &fast.as_ref().unwrap().next;
+            x += 1;
+        }
+
+        let mut slow = &mut head;
+
+        while x > 0 {
             slow = &mut slow.as_mut().unwrap().next;
+            x -= 1;
         }
         slow.as_mut().unwrap().next = slow.as_mut().unwrap().next.as_mut().unwrap().next.clone();
 
