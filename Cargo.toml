@@ -20,4 +20,5 @@ members = [
     "merge-two-sorted-lists",
     "find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k",
     "remove-nth-node-from-end-of-list",
+    "remove-duplicates-from-sorted-array",
 ]
