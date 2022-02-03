@@ -18,4 +18,5 @@ members = [
     "longest-common-prefix",
     "valid-parentheses",
     "merge-two-sorted-lists",
+    "find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k",
 ]
