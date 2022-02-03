@@ -15,6 +15,7 @@
 - [20. Valid Parentheses](./valid-parentheses/src/lib.rs)
 - [21. Merge Two Sorted Lists](./merge-two-sorted-lists/src/lib.rs)
 - [26. Remove Duplicates from Sorted Array](./remove-duplicates-from-sorted-array/src/lib.rs)
+- [28. Implement strStr()](./implement-strstr/src/lib.rs)
 - [884. Uncommon Words from Two Sentences](./uncommon-words-from-two-sentences/src/lib.rs)
 - [1342. Number of Steps to Reduce a Number to Zero](./number-of-steps-to-reduce-a-number-to-zero/src/lib.rs)
 - [1414. Find the Minimum Number of Fibonacci Numbers Whose Sum Is K](./find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k/src/lib.rs)
