@@ -21,7 +21,6 @@ impl Solution {
         if nums.is_empty() {
             return 0;
         }
-
         let mut len = 1;
 
         for i in 1..nums.len() {
