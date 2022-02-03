@@ -22,4 +22,5 @@ members = [
     "remove-nth-node-from-end-of-list",
     "remove-duplicates-from-sorted-array",
     "implement-strstr",
+    "remove-element",
 ]
