@@ -27,7 +27,7 @@ impl Solution {
 
         nums.sort();
 
-        for i in 0..len {
+        for i in 0..len - 2 {
             if nums[i] > 0 {
                 break;
             }
