@@ -23,4 +23,5 @@ members = [
     "remove-duplicates-from-sorted-array",
     "implement-strstr",
     "remove-element",
+    "number-of-rectangles-that-can-form-the-largest-square",
 ]
