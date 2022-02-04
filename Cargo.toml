@@ -26,4 +26,5 @@ members = [
     "number-of-rectangles-that-can-form-the-largest-square",
     "divide-two-integers",
     "search-insert-position",
+    "three-sum",
 ]
