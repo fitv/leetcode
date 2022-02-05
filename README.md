@@ -8,6 +8,7 @@
 - [7. Reverse Integer](./reverse-integer/src/lib.rs)
 - [8. String to Integer (atoi)](./string-to-integer-atoi/src/lib.rs)
 - [9. Palindrome Number](./palindrome-number/src/lib.rs)
+- [11. Container With Most Water](./container-with-most-water/src/lib.rs)
 - [12. Integer to Roman](./integer-to-roman/src/lib.rs)
 - [13. Roman to Integer](./roman-to-integer/src/lib.rs)
 - [14. Longest Common Prefix](./longest-common-prefix/src/lib.rs)
