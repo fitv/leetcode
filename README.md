@@ -12,6 +12,7 @@
 - [13. Roman to Integer](./roman-to-integer/src/lib.rs)
 - [14. Longest Common Prefix](./longest-common-prefix/src/lib.rs)
 - [15. Three Sum](./three-sum/src/lib.rs)
+- [16. Three Sum Closest](./three-sum-closest/src/lib.rs)
 - [19. Remove Nth Node From End of List](./remove-nth-node-from-end-of-list/src/lib.rs)
 - [20. Valid Parentheses](./valid-parentheses/src/lib.rs)
 - [21. Merge Two Sorted Lists](./merge-two-sorted-lists/src/lib.rs)

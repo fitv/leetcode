@@ -27,4 +27,5 @@ members = [
     "divide-two-integers",
     "search-insert-position",
     "three-sum",
+    "three-sum-closest",
 ]
