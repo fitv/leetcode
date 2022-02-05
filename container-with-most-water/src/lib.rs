@@ -11,7 +11,7 @@ impl Solution {
         while left < right {
             area = cmp::max(
                 area,
-                ((right - left) as i32) * (cmp::min(height[right], height[left])),
+                ((right - left) as i32) * cmp::min(height[right], height[left]),
             );
 
             if height[right] > height[left] {
