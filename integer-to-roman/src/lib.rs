@@ -1,17 +1,3 @@
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_int_to_roman() {
-        assert_eq!(Solution::int_to_roman(3), "III");
-        assert_eq!(Solution::int_to_roman(4), "IV");
-        assert_eq!(Solution::int_to_roman(9), "IX");
-        assert_eq!(Solution::int_to_roman(58), "LVIII");
-        assert_eq!(Solution::int_to_roman(1994), "MCMXCIV");
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -41,5 +27,19 @@ impl Solution {
             }
         }
         result
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_int_to_roman() {
+        assert_eq!(Solution::int_to_roman(3), "III");
+        assert_eq!(Solution::int_to_roman(4), "IV");
+        assert_eq!(Solution::int_to_roman(9), "IX");
+        assert_eq!(Solution::int_to_roman(58), "LVIII");
+        assert_eq!(Solution::int_to_roman(1994), "MCMXCIV");
     }
 }

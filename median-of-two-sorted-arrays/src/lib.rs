@@ -1,31 +1,3 @@
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_find_median_sorted_arrays() {
-        let nums1 = vec![1, 3];
-        let nums2 = vec![2];
-        assert_eq!(Solution::find_median_sorted_arrays(nums1, nums2), 2.0);
-
-        let nums1 = vec![1, 2];
-        let nums2 = vec![3, 4];
-        assert_eq!(Solution::find_median_sorted_arrays(nums1, nums2), 2.5);
-
-        let nums1 = vec![0, 0];
-        let nums2 = vec![0, 0];
-        assert_eq!(Solution::find_median_sorted_arrays(nums1, nums2), 0.0);
-
-        let nums1 = vec![];
-        let nums2 = vec![1];
-        assert_eq!(Solution::find_median_sorted_arrays(nums1, nums2), 1.0);
-
-        let nums1 = vec![2];
-        let nums2 = vec![];
-        assert_eq!(Solution::find_median_sorted_arrays(nums1, nums2), 2.0);
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -72,5 +44,33 @@ impl Solution {
         }
 
         ((values.0 + values.1) as f64) / 2.0
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_find_median_sorted_arrays() {
+        let nums1 = vec![1, 3];
+        let nums2 = vec![2];
+        assert_eq!(Solution::find_median_sorted_arrays(nums1, nums2), 2.0);
+
+        let nums1 = vec![1, 2];
+        let nums2 = vec![3, 4];
+        assert_eq!(Solution::find_median_sorted_arrays(nums1, nums2), 2.5);
+
+        let nums1 = vec![0, 0];
+        let nums2 = vec![0, 0];
+        assert_eq!(Solution::find_median_sorted_arrays(nums1, nums2), 0.0);
+
+        let nums1 = vec![];
+        let nums2 = vec![1];
+        assert_eq!(Solution::find_median_sorted_arrays(nums1, nums2), 1.0);
+
+        let nums1 = vec![2];
+        let nums2 = vec![];
+        assert_eq!(Solution::find_median_sorted_arrays(nums1, nums2), 2.0);
     }
 }

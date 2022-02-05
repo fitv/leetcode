@@ -1,17 +1,3 @@
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_divide() {
-        assert_eq!(Solution::divide(10, 3), 3);
-        assert_eq!(Solution::divide(7, -3), -2);
-        assert_eq!(Solution::divide(-100, 3), -33);
-        assert_eq!(Solution::divide(i32::MIN, 2), -1073741824);
-        assert_eq!(Solution::divide(i32::MIN, -1), i32::MAX);
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -35,5 +21,19 @@ impl Solution {
             }
         }
         return if negative { -ans } else { ans };
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_divide() {
+        assert_eq!(Solution::divide(10, 3), 3);
+        assert_eq!(Solution::divide(7, -3), -2);
+        assert_eq!(Solution::divide(-100, 3), -33);
+        assert_eq!(Solution::divide(i32::MIN, 2), -1073741824);
+        assert_eq!(Solution::divide(i32::MIN, -1), i32::MAX);
     }
 }

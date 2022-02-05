@@ -1,15 +1,3 @@
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_number_of_steps() {
-        assert_eq!(Solution::number_of_steps(8), 4);
-        assert_eq!(Solution::number_of_steps(14), 6);
-        assert_eq!(Solution::number_of_steps(123), 12);
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -26,5 +14,17 @@ impl Solution {
             times += 1;
         }
         times
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_number_of_steps() {
+        assert_eq!(Solution::number_of_steps(8), 4);
+        assert_eq!(Solution::number_of_steps(14), 6);
+        assert_eq!(Solution::number_of_steps(123), 12);
     }
 }

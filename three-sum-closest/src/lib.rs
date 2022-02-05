@@ -50,7 +50,7 @@ mod tests {
     use crate::Solution;
 
     #[test]
-    fn test_three_sum() {
+    fn test_three_sum_closest() {
         assert_eq!(Solution::three_sum_closest(vec![-1, 2, 1, -4], 1), 2);
         assert_eq!(Solution::three_sum_closest(vec![0, 0, 0], 1), 0);
         assert_eq!(Solution::three_sum_closest(vec![1, 1, 1, 1], 0), 3);

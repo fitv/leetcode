@@ -1,41 +1,3 @@
-#[cfg(test)]
-mod tests {
-    use crate::{ListNode, Solution};
-
-    #[test]
-    fn test_add_two_numbers() {
-        let mut n1 = ListNode::new(9);
-        n1.append(9);
-        n1.append(9);
-        n1.append(9);
-        n1.append(9);
-        n1.append(9);
-        n1.append(9);
-        let l1 = Some(Box::new(n1));
-
-        let mut n2 = ListNode::new(9);
-        n2.append(9);
-        n2.append(9);
-        n2.append(9);
-        let l2 = Some(Box::new(n2));
-
-        let result = Solution::add_two_numbers(l1, l2);
-        let mut nums = vec![];
-        let mut node = result.unwrap();
-
-        loop {
-            nums.push(node.val);
-
-            if node.next.is_none() {
-                break;
-            }
-            node = node.next.unwrap();
-        }
-
-        assert_eq!(nums, vec![8, 9, 9, 9, 0, 0, 0, 1]);
-    }
-}
-
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
@@ -97,5 +59,43 @@ impl Solution {
                 done2 = true;
             }
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::{ListNode, Solution};
+
+    #[test]
+    fn test_add_two_numbers() {
+        let mut n1 = ListNode::new(9);
+        n1.append(9);
+        n1.append(9);
+        n1.append(9);
+        n1.append(9);
+        n1.append(9);
+        n1.append(9);
+        let l1 = Some(Box::new(n1));
+
+        let mut n2 = ListNode::new(9);
+        n2.append(9);
+        n2.append(9);
+        n2.append(9);
+        let l2 = Some(Box::new(n2));
+
+        let result = Solution::add_two_numbers(l1, l2);
+        let mut nums = vec![];
+        let mut node = result.unwrap();
+
+        loop {
+            nums.push(node.val);
+
+            if node.next.is_none() {
+                break;
+            }
+            node = node.next.unwrap();
+        }
+
+        assert_eq!(nums, vec![8, 9, 9, 9, 0, 0, 0, 1]);
     }
 }

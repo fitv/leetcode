@@ -1,35 +1,3 @@
-#[cfg(test)]
-mod tests {
-    use crate::{ListNode, Solution};
-
-    #[test]
-    fn test_merge_two_lists() {
-        let mut n1 = ListNode::new(1);
-        n1.append(2);
-        n1.append(4);
-        let l1 = Some(Box::new(n1));
-
-        let mut n2 = ListNode::new(1);
-        n2.append(3);
-        n2.append(4);
-        let l2 = Some(Box::new(n2));
-
-        let mut result = Solution::merge_two_lists(l1, l2);
-        let mut nums = vec![];
-
-        loop {
-            if result.is_none() {
-                break;
-            }
-            let node = result.unwrap();
-            nums.push(node.val);
-            result = node.next
-        }
-
-        assert_eq!(nums, vec![1, 1, 2, 3, 4, 4]);
-    }
-}
-
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
@@ -81,5 +49,37 @@ impl Solution {
             n2.next = Self::merge_two_lists(Some(n1), n2.next);
             return Some(n2);
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::{ListNode, Solution};
+
+    #[test]
+    fn test_merge_two_lists() {
+        let mut n1 = ListNode::new(1);
+        n1.append(2);
+        n1.append(4);
+        let l1 = Some(Box::new(n1));
+
+        let mut n2 = ListNode::new(1);
+        n2.append(3);
+        n2.append(4);
+        let l2 = Some(Box::new(n2));
+
+        let mut result = Solution::merge_two_lists(l1, l2);
+        let mut nums = vec![];
+
+        loop {
+            if result.is_none() {
+                break;
+            }
+            let node = result.unwrap();
+            nums.push(node.val);
+            result = node.next
+        }
+
+        assert_eq!(nums, vec![1, 1, 2, 3, 4, 4]);
     }
 }

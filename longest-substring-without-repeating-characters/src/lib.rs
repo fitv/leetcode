@@ -1,23 +1,6 @@
 use std::cmp;
 use std::collections::HashMap;
 
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_length_of_longest_substring() {
-        let s = String::from("pwwkew");
-        assert_eq!(Solution::length_of_longest_substring(s), 3);
-
-        let s = String::from("aaaa");
-        assert_eq!(Solution::length_of_longest_substring(s), 1);
-
-        let s = String::from("dvdf");
-        assert_eq!(Solution::length_of_longest_substring(s), 3);
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -38,5 +21,22 @@ impl Solution {
             map.insert(chars[i], i);
         }
         return len as i32;
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_length_of_longest_substring() {
+        let s = String::from("pwwkew");
+        assert_eq!(Solution::length_of_longest_substring(s), 3);
+
+        let s = String::from("aaaa");
+        assert_eq!(Solution::length_of_longest_substring(s), 1);
+
+        let s = String::from("dvdf");
+        assert_eq!(Solution::length_of_longest_substring(s), 3);
     }
 }

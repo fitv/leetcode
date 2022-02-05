@@ -1,23 +1,3 @@
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_str_str() {
-        let haystack = String::from("hello");
-        let needle = String::from("ll");
-        assert_eq!(Solution::str_str(haystack, needle), 2);
-
-        let haystack = String::from("aaaaa");
-        let needle = String::from("bba");
-        assert_eq!(Solution::str_str(haystack, needle), -1);
-
-        let haystack = String::from("");
-        let needle = String::from("");
-        assert_eq!(Solution::str_str(haystack, needle), 0);
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -62,5 +42,25 @@ impl Solution {
             }
         }
         -1
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_str_str() {
+        let haystack = String::from("hello");
+        let needle = String::from("ll");
+        assert_eq!(Solution::str_str(haystack, needle), 2);
+
+        let haystack = String::from("aaaaa");
+        let needle = String::from("bba");
+        assert_eq!(Solution::str_str(haystack, needle), -1);
+
+        let haystack = String::from("");
+        let needle = String::from("");
+        assert_eq!(Solution::str_str(haystack, needle), 0);
     }
 }

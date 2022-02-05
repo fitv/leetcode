@@ -1,16 +1,3 @@
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_find_min_fibonacci_numbers() {
-        assert_eq!(Solution::find_min_fibonacci_numbers(7), 2);
-        assert_eq!(Solution::find_min_fibonacci_numbers(10), 2);
-        assert_eq!(Solution::find_min_fibonacci_numbers(17), 3);
-        assert_eq!(Solution::find_min_fibonacci_numbers(5702920), 5);
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -33,5 +20,18 @@ impl Solution {
             len -= 1;
         }
         ans
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_find_min_fibonacci_numbers() {
+        assert_eq!(Solution::find_min_fibonacci_numbers(7), 2);
+        assert_eq!(Solution::find_min_fibonacci_numbers(10), 2);
+        assert_eq!(Solution::find_min_fibonacci_numbers(17), 3);
+        assert_eq!(Solution::find_min_fibonacci_numbers(5702920), 5);
     }
 }

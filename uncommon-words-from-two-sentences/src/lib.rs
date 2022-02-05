@@ -1,22 +1,5 @@
 use std::collections::HashMap;
 
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_uncommon_from_sentences() {
-        let s1 = String::from("this apple is sweet");
-        let s2 = String::from("this apple is sour");
-        let result = Solution::uncommon_from_sentences(s1, s2);
-        assert!(result == vec!["sweet", "sour"] || result == vec!["sour", "sweet"]);
-
-        let s1 = String::from("apple apple");
-        let s2 = String::from("banana");
-        assert_eq!(Solution::uncommon_from_sentences(s1, s2), vec!["banana"]);
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -35,5 +18,22 @@ impl Solution {
             }
         }
         words
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_uncommon_from_sentences() {
+        let s1 = String::from("this apple is sweet");
+        let s2 = String::from("this apple is sour");
+        let result = Solution::uncommon_from_sentences(s1, s2);
+        assert!(result == vec!["sweet", "sour"] || result == vec!["sour", "sweet"]);
+
+        let s1 = String::from("apple apple");
+        let s2 = String::from("banana");
+        assert_eq!(Solution::uncommon_from_sentences(s1, s2), vec!["banana"]);
     }
 }

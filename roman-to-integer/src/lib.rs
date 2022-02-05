@@ -1,28 +1,5 @@
 use std::collections::HashMap;
 
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_int_to_roman() {
-        let s = String::from("III");
-        assert_eq!(Solution::roman_to_int(s), 3);
-
-        let s = String::from("IV");
-        assert_eq!(Solution::roman_to_int(s), 4);
-
-        let s = String::from("IX");
-        assert_eq!(Solution::roman_to_int(s), 9);
-
-        let s = String::from("LVIII");
-        assert_eq!(Solution::roman_to_int(s), 58);
-
-        let s = String::from("MCMXCIV");
-        assert_eq!(Solution::roman_to_int(s), 1994);
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -51,5 +28,28 @@ impl Solution {
             }
         }
         result
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_int_to_roman() {
+        let s = String::from("III");
+        assert_eq!(Solution::roman_to_int(s), 3);
+
+        let s = String::from("IV");
+        assert_eq!(Solution::roman_to_int(s), 4);
+
+        let s = String::from("IX");
+        assert_eq!(Solution::roman_to_int(s), 9);
+
+        let s = String::from("LVIII");
+        assert_eq!(Solution::roman_to_int(s), 58);
+
+        let s = String::from("MCMXCIV");
+        assert_eq!(Solution::roman_to_int(s), 1994);
     }
 }

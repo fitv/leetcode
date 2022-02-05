@@ -1,29 +1,3 @@
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_my_atoi() {
-        let s = String::from("");
-        assert_eq!(Solution::my_atoi(s), 0);
-
-        let s = String::from("42");
-        assert_eq!(Solution::my_atoi(s), 42);
-
-        let s = String::from("   -42");
-        assert_eq!(Solution::my_atoi(s), -42);
-
-        let s = String::from("4193 with words");
-        assert_eq!(Solution::my_atoi(s), 4193);
-
-        let s = String::from("words and 987");
-        assert_eq!(Solution::my_atoi(s), 0);
-
-        let s = String::from("-91283472332");
-        assert_eq!(Solution::my_atoi(s), i32::MIN);
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -82,5 +56,31 @@ impl Solution {
             '9' => 9,
             _ => 0,
         };
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_my_atoi() {
+        let s = String::from("");
+        assert_eq!(Solution::my_atoi(s), 0);
+
+        let s = String::from("42");
+        assert_eq!(Solution::my_atoi(s), 42);
+
+        let s = String::from("   -42");
+        assert_eq!(Solution::my_atoi(s), -42);
+
+        let s = String::from("4193 with words");
+        assert_eq!(Solution::my_atoi(s), 4193);
+
+        let s = String::from("words and 987");
+        assert_eq!(Solution::my_atoi(s), 0);
+
+        let s = String::from("-91283472332");
+        assert_eq!(Solution::my_atoi(s), i32::MIN);
     }
 }

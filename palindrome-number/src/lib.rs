@@ -1,17 +1,3 @@
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_is_palindrome() {
-        assert_eq!(Solution::is_palindrome(121), true);
-        assert_eq!(Solution::is_palindrome(-121), false);
-        assert_eq!(Solution::is_palindrome(10), false);
-        assert_eq!(Solution::is_palindrome(-101), false);
-        assert_eq!(Solution::is_palindrome(90000009), true);
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -28,5 +14,19 @@ impl Solution {
             y /= 10;
         }
         sum == x
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_is_palindrome() {
+        assert_eq!(Solution::is_palindrome(121), true);
+        assert_eq!(Solution::is_palindrome(-121), false);
+        assert_eq!(Solution::is_palindrome(10), false);
+        assert_eq!(Solution::is_palindrome(-101), false);
+        assert_eq!(Solution::is_palindrome(90000009), true);
     }
 }

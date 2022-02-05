@@ -1,28 +1,5 @@
 use std::collections::HashMap;
 
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_longest_nice_substring() {
-        let s = String::from("c");
-        assert_eq!(Solution::longest_nice_substring(s), "");
-
-        let s = String::from("Bb");
-        assert_eq!(Solution::longest_nice_substring(s), "Bb");
-
-        let s = String::from("dDzeE");
-        assert_eq!(Solution::longest_nice_substring(s), "dD");
-
-        let s = String::from("abABB");
-        assert_eq!(Solution::longest_nice_substring(s), "abABB");
-
-        let s = String::from("YazaAay");
-        assert_eq!(Solution::longest_nice_substring(s), "aAa");
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -52,5 +29,28 @@ impl Solution {
             }
         }
         result
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_longest_nice_substring() {
+        let s = String::from("c");
+        assert_eq!(Solution::longest_nice_substring(s), "");
+
+        let s = String::from("Bb");
+        assert_eq!(Solution::longest_nice_substring(s), "Bb");
+
+        let s = String::from("dDzeE");
+        assert_eq!(Solution::longest_nice_substring(s), "dD");
+
+        let s = String::from("abABB");
+        assert_eq!(Solution::longest_nice_substring(s), "abABB");
+
+        let s = String::from("YazaAay");
+        assert_eq!(Solution::longest_nice_substring(s), "aAa");
     }
 }

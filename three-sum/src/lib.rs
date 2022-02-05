@@ -1,18 +1,5 @@
 use std::cmp;
 
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_three_sum() {
-        assert_eq!(
-            Solution::three_sum(vec![-1, 0, 1, 2, -1, -4]),
-            vec![vec![-1, -1, 2], vec![-1, 0, 1]]
-        );
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -62,5 +49,18 @@ impl Solution {
             }
         }
         result
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_three_sum() {
+        assert_eq!(
+            Solution::three_sum(vec![-1, 0, 1, 2, -1, -4]),
+            vec![vec![-1, -1, 2], vec![-1, 0, 1]]
+        );
     }
 }

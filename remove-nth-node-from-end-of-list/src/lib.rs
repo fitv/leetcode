@@ -1,32 +1,3 @@
-#[cfg(test)]
-mod tests {
-    use crate::{ListNode, Solution};
-
-    #[test]
-    fn test_remove_nth_from_end() {
-        let mut n1 = ListNode::new(1);
-        n1.append(2);
-        n1.append(3);
-        n1.append(4);
-        n1.append(5);
-        let l1 = Some(Box::new(n1));
-
-        let mut result = Solution::remove_nth_from_end(l1, 2);
-        let mut nums = vec![];
-
-        loop {
-            if result.is_none() {
-                break;
-            }
-            let node = result.unwrap();
-            nums.push(node.val);
-            result = node.next
-        }
-
-        assert_eq!(nums, vec![1, 2, 3, 5]);
-    }
-}
-
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
@@ -83,5 +54,34 @@ impl Solution {
         slow.as_mut().unwrap().next = slow.as_mut().unwrap().next.as_mut().unwrap().next.clone();
 
         head
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::{ListNode, Solution};
+
+    #[test]
+    fn test_remove_nth_from_end() {
+        let mut n1 = ListNode::new(1);
+        n1.append(2);
+        n1.append(3);
+        n1.append(4);
+        n1.append(5);
+        let l1 = Some(Box::new(n1));
+
+        let mut result = Solution::remove_nth_from_end(l1, 2);
+        let mut nums = vec![];
+
+        loop {
+            if result.is_none() {
+                break;
+            }
+            let node = result.unwrap();
+            nums.push(node.val);
+            result = node.next
+        }
+
+        assert_eq!(nums, vec![1, 2, 3, 5]);
     }
 }

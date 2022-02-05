@@ -1,5 +1,23 @@
 use std::collections::HashMap;
 
+pub struct Solution {}
+
+impl Solution {
+    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
+        let mut map = HashMap::new();
+
+        for (i, &num) in nums.iter().enumerate() {
+            let val = map.get(&(target - num));
+
+            if val.is_some() {
+                return vec![i as i32, *val.unwrap() as i32];
+            }
+            map.insert(num, i);
+        }
+        vec![]
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use crate::Solution;
@@ -17,23 +35,5 @@ mod tests {
         let nums = vec![1, 3, 5];
         let result = Solution::two_sum(nums, 10);
         assert_eq!(result, vec![]);
-    }
-}
-
-pub struct Solution {}
-
-impl Solution {
-    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        let mut map = HashMap::new();
-
-        for (i, &num) in nums.iter().enumerate() {
-            let val = map.get(&(target - num));
-
-            if val.is_some() {
-                return vec![i as i32, *val.unwrap() as i32];
-            }
-            map.insert(num, i);
-        }
-        vec![]
     }
 }

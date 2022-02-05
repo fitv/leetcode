@@ -1,20 +1,3 @@
-#[cfg(test)]
-mod tests {
-    use crate::Solution;
-
-    #[test]
-    fn test_reverse_prefix() {
-        let s = String::from("abcdefd");
-        assert_eq!(Solution::reverse_prefix(s, 'd'), "dcbaefd");
-
-        let s = String::from("xyxzxe");
-        assert_eq!(Solution::reverse_prefix(s, 'z'), "zxyxxe");
-
-        let s = String::from("abcd");
-        assert_eq!(Solution::reverse_prefix(s, 'z'), "abcd");
-    }
-}
-
 pub struct Solution {}
 
 impl Solution {
@@ -35,5 +18,22 @@ impl Solution {
             }
         }
         word
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Solution;
+
+    #[test]
+    fn test_reverse_prefix() {
+        let s = String::from("abcdefd");
+        assert_eq!(Solution::reverse_prefix(s, 'd'), "dcbaefd");
+
+        let s = String::from("xyxzxe");
+        assert_eq!(Solution::reverse_prefix(s, 'z'), "zxyxxe");
+
+        let s = String::from("abcd");
+        assert_eq!(Solution::reverse_prefix(s, 'z'), "abcd");
     }
 }
