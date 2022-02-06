@@ -29,4 +29,5 @@ members = [
     "three-sum",
     "three-sum-closest",
     "container-with-most-water",
+    "sum-of-unique-elements",
 ]
