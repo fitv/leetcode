@@ -2,10 +2,7 @@ pub struct Solution {}
 
 impl Solution {
     pub fn find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
-        let mut nums1 = nums1;
-        let mut nums2 = nums2;
         let len = nums1.len() + nums2.len();
-        let mut tail = len - 1;
         let mut values = (0, 0);
         let position = {
             if len % 2 == 0 {
@@ -14,35 +11,38 @@ impl Solution {
                 (len / 2, len / 2)
             }
         };
+        let (mut head, mut i, mut j) = (0, 0, 0);
+        let (len1, len2) = (nums1.len(), nums2.len());
 
-        while tail >= position.0 {
+        while i < len1 || j < len2 {
             let val;
 
-            if nums1.len() > 0 && nums2.len() > 0 {
-                if nums1.last() > nums2.last() {
-                    val = nums1.pop().unwrap();
+            if i < len1 && j < len2 {
+                if nums1[i] < nums2[j] {
+                    val = nums1[i];
+                    i += 1
                 } else {
-                    val = nums2.pop().unwrap();
+                    val = nums2[j];
+                    j += 1;
                 }
-            } else if nums1.len() > 0 {
-                val = nums1.pop().unwrap();
+            } else if i < len1 {
+                val = nums1[i];
+                i += 1;
             } else {
-                val = nums2.pop().unwrap();
+                val = nums2[j];
+                j += 1;
             }
 
-            if tail == position.0 {
+            if head == position.0 {
                 values.0 = val;
             }
-            if tail == position.1 {
+            if head == position.1 {
                 values.1 = val;
-            }
-
-            if tail == 0 {
                 break;
             }
-            tail -= 1;
-        }
 
+            head += 1;
+        }
         ((values.0 + values.1) as f64) / 2.0
     }
 }
