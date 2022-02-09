@@ -30,4 +30,5 @@ members = [
     "three-sum-closest",
     "container-with-most-water",
     "sum-of-unique-elements",
+    "count-number-of-pairs-with-absolute-difference-k",
 ]

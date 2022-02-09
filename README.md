@@ -29,3 +29,4 @@
 - [1748. Sum of Unique Elements](./sum-of-unique-elements/src/lib.rs)
 - [1763. Longest Nice Substring](./longest-nice-substring/src/lib.rs)
 - [2000. Reverse Prefix of Word](./reverse-prefix-of-word/src/lib.rs)
+- [2006. Count Number of Pairs With Absolute Difference K](./count-number-of-pairs-with-absolute-difference-k/src/lib.rs)
