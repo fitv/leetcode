@@ -31,4 +31,5 @@ members = [
     "container-with-most-water",
     "sum-of-unique-elements",
     "count-number-of-pairs-with-absolute-difference-k",
+    "simplified-fractions",
 ]

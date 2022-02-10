@@ -25,6 +25,7 @@
 - [884. Uncommon Words from Two Sentences](./uncommon-words-from-two-sentences/src/lib.rs)
 - [1342. Number of Steps to Reduce a Number to Zero](./number-of-steps-to-reduce-a-number-to-zero/src/lib.rs)
 - [1414. Find the Minimum Number of Fibonacci Numbers Whose Sum Is K](./find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k/src/lib.rs)
+- [1447. Simplified Fractions](./simplified-fractions/src/lib.rs)
 - [1725. Number Of Rectangles That Can Form The Largest Square](./number-of-rectangles-that-can-form-the-largest-square/src/lib.rs)
 - [1748. Sum of Unique Elements](./sum-of-unique-elements/src/lib.rs)
 - [1763. Longest Nice Substring](./longest-nice-substring/src/lib.rs)
