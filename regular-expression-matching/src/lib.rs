@@ -6,10 +6,10 @@ impl Solution {
     }
 
     fn is_match_regex(s: &Vec<char>, p: &Vec<char>) -> bool {
-        if p.len() == 0 {
-            return s.len() == 0;
+        if p.is_empty() {
+            return s.is_empty();
         }
-        let first_match = s.len() > 0 && (s[0] == p[0] || p[0] == '.');
+        let first_match = !s.is_empty() && (s[0] == p[0] || p[0] == '.');
 
         if p.len() >= 2 && p[1] == '*' {
             Self::is_match_regex(s, &p[2..].to_vec())
