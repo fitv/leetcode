@@ -33,4 +33,5 @@ members = [
     "count-number-of-pairs-with-absolute-difference-k",
     "simplified-fractions",
     "binary-search",
+    "regular-expression-matching",
 ]
